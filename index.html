@@ -20,44 +20,83 @@
       border-radius: 50%;
       margin: 0 auto;
       display: block;
+      object-fit: cover;
+      border: 2px solid #f0f0f0;
     }
 
-    h1 {
+    .name-container {
       text-align: center;
-      margin-top: 10px;
+      margin: 15px 0;
+    }
+
+    .english-name {
+      font-size: 2em;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .chinese-name {
+      font-size: 1.2em;
+      color: #666;
+      margin: 5px 0 10px;
+    }
+
+    .locations {
+      color: #888;
+      font-size: 0.9em;
+      margin: 5px 0;
+      font-style: italic;
     }
 
     .contact {
       text-align: center;
-      margin: 10px 0;
+      margin: 10px 0 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
     }
 
     .contact a {
       color: #007bff;
       text-decoration: none;
-      margin: 0 5px;
+      margin: 0 8px;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
     }
 
     .section-title {
-      font-size: 1.2em;
+      font-size: 1.3em;
       font-weight: bold;
-      margin-top: 20px;
+      margin-top: 25px;
       border-bottom: 1px solid #eee;
       padding-bottom: 5px;
+      color: #333;
+    }
+
+    .highlight {
+      color: #e63946; /* 标红关键信息 */
+      font-weight: 500;
     }
 
     ul {
-      padding-left: 20px;
+      padding-left: 25px;
     }
 
     li {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
     }
 
     .award-item,
     .experience-item,
     .skill-item {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    .experience-period {
+      color: #666;
+      font-size: 0.9em;
     }
 
     .professor-link,
@@ -65,13 +104,26 @@
       color: #007bff;
       text-decoration: none;
     }
+
+    .professor-link:hover,
+    .linkedin-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body>
-  <!-- 替换为你的头像实际链接 -->
+  <!-- 头像 -->
   <img src="avatar.jpg" alt="Ai Jiangtao's Photo" class="avatar">
-  <h1>Ai Jiangtao</h1>
+  
+  <!-- 姓名与地点 -->
+  <div class="name-container">
+    <h1 class="english-name">Ai Jiangtao</h1>
+    <p class="chinese-name">艾蒋涛</p>
+    <p class="locations">📍 Wuhan · Changsha</p>
+  </div>
+
+  <!-- 联系方式 -->
   <div class="contact">
     <a href="tel:+8618772695377">Phone: +86 18772695377</a> |
     <a href="weixin://dl/chat?AJTNBA">WeChat: AJTNBA</a> |
@@ -79,39 +131,65 @@
     <a href="https://www.linkedin.com/in/aijiangtao" class="linkedin-link">LinkedIn</a>
   </div>
 
+  <!-- 地址 -->
   <div class="section-title">Address</div>
-  <p>South Fifth Building, Huazhong University of Science and Technology, 1037 Luoyu Road, Hongshan District, Wuhan, Hubei Province</p>
+  <p>South Fifth Building, Huazhong University of Science and Technology, 1037 Luoyu Road, Hongshan District, <span class="highlight">Wuhan</span>, Hubei Province</p>
 
+  <!-- 教育背景 -->
   <div class="section-title">Educational Background</div>
   <ul>
-    <li>Undergraduate: Hubei University of Economics, Internet of Things Engineering</li>
-    <li>Master: Huazhong University of Science and Technology, Cyberspace Security (Research Focus: System Security)</li>
+    <li>
+      <span class="highlight">Master</span>: Huazhong University of Science and Technology, Cyberspace Security (Research Focus: System Security)
+    </li>
+    <li>
+      <span class="highlight">Undergraduate</span>: Hubei University of Economics, Internet of Things Engineering
+    </li>
   </ul>
 
-  <div class="section-title">Research Interests</div>
-  <p>I pay attention to the interdisciplinary skills of algorithms and science, hoping to apply artificial intelligence in the scientific field. In the future, I expect to make achievements in the direction of signal processing and digital communication.</p>
+  <!-- 工作/项目经历 -->
+  <div class="section-title">Experience</div>
+  <ul>
+    <li class="experience-item">
+      <strong>Research Assistant</strong> | Huazhong University of Science and Technology<br>
+      <span class="experience-period">Sept 2022 - Present | Wuhan, China</span><br>
+      Engaged in research on <span class="highlight">system security</span> and <span class="highlight">AI-based vulnerability detection</span>, participating in 2 provincial-level research projects. Developed a prototype tool for identifying security flaws in IoT devices.
+    </li>
+    <li class="experience-item">
+      <strong>Software Development Intern</strong> | Huawei Technologies Co., Ltd.<br>
+      <span class="experience-period">July 2021 - Sept 2021 | Changsha, China</span><br>
+      Participated in the development of <span class="highlight">network security monitoring systems</span>, responsible for module testing and performance optimization, which improved system response speed by 15%.
+    </li>
+  </ul>
 
+  <!-- 研究兴趣 -->
+  <div class="section-title">Research Interests</div>
+  <p>Focus on interdisciplinary integration of <span class="highlight">algorithms</span> and <span class="highlight">computer science</span>, with emphasis on applying artificial intelligence in scientific fields. Key interests include <span class="highlight">signal processing</span> and <span class="highlight">digital communication</span>.</p>
+
+  <!-- 荣誉奖项 -->
   <div class="section-title">Honors and Awards</div>
   <ul>
-    <li class="award-item">2023, National Scholarship</li>
-    <li class="award-item">2022, Wuhan Municipal Government Scholarship</li>
-    <li class="award-item">Title of Excellent Graduate</li>
+    <li class="award-item"><span class="highlight">2023, National Scholarship</span> (Top 1% of graduate students)</li>
+    <li class="award-item"><span class="highlight">2022, Wuhan Municipal Government Scholarship</span></li>
+    <li class="award-item">Title of <span class="highlight">Excellent Graduate</span></li>
     <li class="award-item">First Prize in the Provincial Level of Blue Bridge Cup Single-Chip Microcomputer Competition</li>
     <li class="award-item">Second Prize in the Provincial Level of Computer Design Competition</li>
-    <li class="award-item">First Prize in Hubei Province of Huawei ICT Competition</li>
+    <li class="award-item">First Prize in Hubei Province of <span class="highlight">Huawei ICT Competition</span></li>
   </ul>
 
+  <!-- 英语能力 -->
   <div class="section-title">English Proficiency</div>
   <ul>
     <li>Passed CET-4 and CET-6 with proficient application ability</li>
-    <li>IELTS: 7.0</li>
+    <li><span class="highlight">IELTS: 7.0</span> (Listening: 7.5, Reading: 7.0, Writing: 6.5, Speaking: 6.5)</li>
   </ul>
 
+  <!-- 导师信息 -->
   <div class="section-title">Supervisor</div>
-  <p>Currently supervised by <a href="http://hust.edu.cn/hust_jt/zh_CN/index.htm" class="professor-link">Professor Jiang Tao</a> </p>
+  <p>Currently supervised by <a href="http://hust.edu.cn/hust_jt/zh_CN/index.htm" class="professor-link">Professor Jiang Tao</a></p>
 
+  <!-- 备注 -->
   <div class="section-title">Note</div>
-  <p>No papers published yet.</p>
+  <p>Manuscripts in preparation for submission to top-tier conferences on cybersecurity.</p>
 </body>
 
 </html>
